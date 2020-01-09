@@ -24,10 +24,12 @@ body {
 
 .header .header__text h1 {
   font-size: 35px;
+  color: #2D102C;
 }
 
 .header .header__text p {
   font-size: 25px;
+  color: #2D102C;
 }
 
 @media (orientation: landscape) {
@@ -105,6 +107,203 @@ body {
   }
   .header .header__text p {
     font-size: 50px;
+  }
+}
+
+.section {
+  width: 100vw;
+  background-color: #2D102C;
+  padding-top: 50px;
+  padding-bottom: 75px;
+}
+
+.section .section__name {
+  width: 80%;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 40px;
+  color: #fff;
+}
+
+.section .section__name .dot {
+  color: #fe6b3f;
+  font-size: 80px;
+}
+
+.section .section__flex {
+  margin-top: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 1100px;
+}
+
+.section .section__flex .avatar {
+  max-width: 50%;
+}
+
+.section .section__flex .avatar .avatar__img {
+  width: 100%;
+  border-radius: 25%;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.section .section__flex .about-me__desctiprion {
+  margin-top: 25px;
+  width: 80%;
+  color: #fff;
+  line-height: 20px;
+}
+
+@media screen and (min-width: 375px) and (orientation: portrait) {
+  .section .section__name {
+    font-size: 50px;
+  }
+  .section .section__name .dot {
+    font-size: 100px;
+  }
+  .section .section__flex .about-me__desctiprion {
+    font-size: 20px;
+    line-height: 23px;
+  }
+}
+
+@media screen and (min-width: 768px) and (orientation: portrait) {
+  .section .section__name {
+    width: 80%;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    font-size: 50px;
+  }
+  .section .section__name .dot {
+    font-size: 100px;
+  }
+  .section .section__flex {
+    width: 80%;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .section .section__flex .avatar {
+    max-width: 30%;
+  }
+  .section .section__flex .about-me__desctiprion {
+    width: 60%;
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) and (orientation: portrait) {
+  .section .section__name {
+    font-size: 60px;
+  }
+  .section .section__name .dot {
+    font-size: 120px;
+  }
+  .section .section__flex .about-me__desctiprion {
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+
+@media (orientation: landscape) {
+  .section .section__name {
+    width: 80%;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    font-size: 40px;
+  }
+  .section .section__name .dot {
+    font-size: 80px;
+  }
+  .section .section__flex {
+    width: 80%;
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .section .section__flex .avatar {
+    max-width: 30%;
+  }
+  .section .section__flex .about-me__desctiprion {
+    width: 60%;
+    font-size: 13px;
+    line-height: 18px;
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 640px) and (orientation: landscape) {
+  .section .section__name {
+    font-size: 45px;
+  }
+  .section .section__name .dot {
+    font-size: 90px;
+  }
+  .section .section__flex .about-me__desctiprion {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+
+@media screen and (min-width: 820px) and (orientation: landscape) {
+  .section .section__name {
+    font-size: 55px;
+  }
+  .section .section__name .dot {
+    font-size: 110px;
+  }
+  .section .section__flex .about-me__desctiprion {
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (orientation: landscape) {
+  .section .section__name {
+    font-size: 65px;
+  }
+  .section .section__name .dot {
+    font-size: 130px;
+  }
+  .section .section__flex .about-me__desctiprion {
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+
+@media screen and (min-width: 1366px) and (orientation: landscape) {
+  .section .section__name {
+    font-size: 65px;
+  }
+  .section .section__name .dot {
+    font-size: 130px;
+  }
+  .section .section__flex .about-me__desctiprion {
+    font-size: 25px;
+    line-height: 30px;
   }
 }
 /*# sourceMappingURL=style.css.map */
