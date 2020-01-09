@@ -16,7 +16,6 @@ body
 
 .section
     width: 100vw
-    background-color: $maincolor
     padding-top: 50px
     padding-bottom: 75px
     max-width: 1400px
@@ -169,3 +168,68 @@ body
             .about-me__desctiprion
                 font-size: 25px
                 line-height: 30px
+                
+.footer-bg
+    width: 100vw
+    height: 100vh
+    background-image: url('../img/footer.png')
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+
+.footer
+    width: 100vw
+    padding-bottom: 25px
+    padding-top: 25px
+    color: #ffffff
+    font-size: 17px
+    background-color: #2D092F
+    .footer__flex
+        display: flex
+        flex-direction: column
+        .footer__box1
+            text-align: center
+        .footer__box2
+            margin-top: 25px
+            display: flex
+            justify-content: center
+            p
+                padding: 15px
+
+@media (orientation: landscape)
+    .footer-bg
+        height: calc(100vw/1440*1080)
+    .footer
+        font-size: 15px
+        .footer__flex
+            display: flex
+            flex-direction: row
+            align-items: center
+            justify-content: space-around
+            .footer__box1
+                text-align: left
+            .footer__box2
+                margin-top: 0px
+                display: flex
+                p
+                    padding: 0px
+                    padding-left: 10px
+                    padding-right: 10px
+            
+@media screen and ( min-width: 768px )
+    .footer
+        font-size: 20px
+        .footer__flex
+            display: flex
+            flex-direction: row
+            align-items: center
+            justify-content: space-around
+            .footer__box1
+                text-align: left
+            .footer__box2
+                margin-top: 0px
+                display: flex
+                p
+                    padding: 0px
+                    padding-left: 10px
+                    padding-right: 10px
