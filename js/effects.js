@@ -1,5 +1,5 @@
 //********************My skills********************
-const swiper = new Swiper('.swiper-container', {
+const swiperSkills = new Swiper('.swiper-container', {
     effect: 'coverflow',
     grabCursor: true,
     centeredSlides: true,

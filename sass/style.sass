@@ -168,7 +168,52 @@ body
             .about-me__desctiprion
                 font-size: 25px
                 line-height: 30px
-                
+
+.section__flex-pr
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+
+.project
+    position: relative
+    width: 90%
+    transform: rotate(-30deg) skew(25deg) scale(.8)
+    margin-top: 50px
+    transition: .5s
+    img
+        width: 100%
+        transition: .5s
+    img:nth-child(1),
+    img:nth-child(2),
+    img:nth-child(3),
+    img:nth-child(4) 
+        position: absolute
+    img:nth-child(4)
+        z-index: 4
+    img:nth-child(5) 
+        opacity: .1
+    &:hover img:nth-child(1) 
+        transform: translate(20px, -20px)
+        opacity: .4
+    &:hover img:nth-child(2) 
+        transform: translate(40px, -40px)
+        opacity: .6
+    &:hover img:nth-child(3) 
+        transform: translate(60px, -60px)
+        opacity: .8
+    &:hover img:nth-child(4) 
+        transform: translate(80px, -80px)
+        opacity: 1
+
+@media (orientation: landscape)
+    .project
+        width: 45%
+
+@media screen and ( min-width: 1440px )
+    .project
+        width: 30%
+
+
 .footer-bg
     width: 100vw
     height: 100vh
@@ -253,7 +298,6 @@ body
     img
         width: 400px
 
-
 .parallax-earth
     right: 10%
     top: 0
@@ -264,7 +308,11 @@ body
 .parallax-comet
     left: 10%
     top: 0
-    transform: translateY(-100%)
+    transform: translateY(-180%)
+    img
+        width: 200px
+
+.parallax-mars
     img
         width: 200px
 
