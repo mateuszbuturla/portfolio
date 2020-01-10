@@ -9,6 +9,27 @@
 @import 'header'
 @import 'mySkillsSlider'
 
+.yellow
+    color: #f0db4f
+
+.blue
+    color: #1572b6
+
+.orange
+    color: #e44f26
+
+.purple
+    color: #421a7c
+
+.cyan
+    color: #00dbfc
+
+.green
+    color: #80bd00
+
+.pink
+    color: #be608b
+
 body
     max-width: 100vw
     overflow-x: hidden
@@ -210,11 +231,56 @@ main
     &:hover img:nth-child(4) 
         transform: translate(80px, -80px)
         opacity: 1
+    .project__description
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 6
+        opacity: 0
+        width: 100%
+        height: 100%
+        background-color: rgba(0,0,0,0.8)
+        transition: .5s
+        color: #fff
+        padding: 15px
+        h3
+            font-size: 22px
+        hr
+            margin-top: 10px
+        p
+            margin-top: 10px
+            font-size: 18px
+        a
+            color: #fff
+            text-decoration: none
+        .viev-code,
+        .view-live
+            margin-top: 10px
+            font-size: 30px
+            margin-right: 15px
+    &:hover .project__description
+        transform: translate(80px, -80px)
+        opacity: 1
 
 @media (orientation: landscape)
     .project
         width: 45%
 
+@media screen and ( min-width: 411px )
+    .project
+        .project__description
+            padding: 25px
+            h3
+                font-size: 27px
+            hr
+                margin-top: 10px
+            p
+                margin-top: 10px
+                font-size: 25px
+            .viev-code
+                margin-top: 10px
+                font-size: 40px
+    
 @media screen and ( min-width: 1440px )
     .project
         width: 30%
@@ -300,6 +366,7 @@ main
 .parallax-astronaut
     position: absolute
     z-index: 10
+    display: none
 
 .parallax-rocket
     right: 10%
@@ -336,3 +403,11 @@ main
     top: 0
     img
         width: 300px
+
+@media screen and ( min-width: 1024px )
+    .parallax-rocket,
+    .parallax-earth,
+    .parallax-comet,
+    .parallax-ufo,
+    .parallax-astronaut
+        display: block
