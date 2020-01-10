@@ -176,6 +176,7 @@ body
     background-position: center
     background-repeat: no-repeat
     background-size: cover
+    position: relative
 
 .footer
     width: 100vw
@@ -233,3 +234,48 @@ body
                     padding: 0px
                     padding-left: 10px
                     padding-right: 10px
+
+.parallax-container
+    width: 100vw
+    position: relative
+
+.parallax-rocket,
+.parallax-earth,
+.parallax-comet,
+.parallax-ufo,
+.parallax-astronaut
+    position: absolute
+    z-index: 10
+
+.parallax-rocket
+    right: 10%
+    top: 0
+    img
+        width: 400px
+
+
+.parallax-earth
+    right: 10%
+    top: 0
+    transform: translateY(-100%)
+    img
+        width: 300px
+
+.parallax-comet
+    left: 10%
+    top: 0
+    transform: translateY(-100%)
+    img
+        width: 200px
+
+.parallax-ufo
+    left: 10%
+    top: 40%
+    img
+        width: 200px
+
+.parallax-astronaut
+    right: 10%
+    top: 0
+    img
+        width: 300px

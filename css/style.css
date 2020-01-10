@@ -358,6 +358,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
 }
 
 .footer {
@@ -466,5 +467,68 @@ body {
     padding-left: 10px;
     padding-right: 10px;
   }
+}
+
+.parallax-container {
+  width: 100vw;
+  position: relative;
+}
+
+.parallax-rocket,
+.parallax-earth,
+.parallax-comet,
+.parallax-ufo,
+.parallax-astronaut {
+  position: absolute;
+  z-index: 10;
+}
+
+.parallax-rocket {
+  right: 10%;
+  top: 0;
+}
+
+.parallax-rocket img {
+  width: 400px;
+}
+
+.parallax-earth {
+  right: 10%;
+  top: 0;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.parallax-earth img {
+  width: 300px;
+}
+
+.parallax-comet {
+  left: 10%;
+  top: 0;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.parallax-comet img {
+  width: 200px;
+}
+
+.parallax-ufo {
+  left: 10%;
+  top: 40%;
+}
+
+.parallax-ufo img {
+  width: 200px;
+}
+
+.parallax-astronaut {
+  right: 10%;
+  top: 0;
+}
+
+.parallax-astronaut img {
+  width: 300px;
 }
 /*# sourceMappingURL=style.css.map */
