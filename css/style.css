@@ -642,6 +642,12 @@ main {
 .footer .footer__flex .footer__box2 p a {
   color: #fff;
   text-decoration: none;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.footer .footer__flex .footer__box2 p a:hover {
+  color: #fe6b3f;
 }
 
 @media (orientation: landscape) {
