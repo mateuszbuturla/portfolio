@@ -755,7 +755,7 @@ main {
 }
 
 .parallax-rocket img {
-  width: 400px;
+  width: 150px;
 }
 
 .parallax-earth {
@@ -766,7 +766,7 @@ main {
 }
 
 .parallax-earth img {
-  width: 300px;
+  width: 200px;
 }
 
 .parallax-comet {
@@ -799,7 +799,7 @@ main {
 }
 
 .parallax-astronaut img {
-  width: 300px;
+  width: 250px;
 }
 
 @media screen and (min-width: 1024px) {
