@@ -4,7 +4,7 @@ const swiperSkills = new Swiper('.swiper-container', {
     grabCursor: true,
     centeredSlides: true,
     slidesPerView: 'auto',
-    initialSlide: 4,
+    initialSlide: 2,
     coverflowEffect: {
         rotate: 10,
         stretch: 0,
