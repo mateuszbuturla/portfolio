@@ -585,6 +585,48 @@ main {
     padding: 25px;
   }
   .project .project__description h3 {
+    font-size: 23px;
+  }
+  .project .project__description hr {
+    margin-top: 5px;
+  }
+  .project .project__description p {
+    margin-top: 5px;
+    font-size: 17px;
+  }
+  .project .project__description .viev-code,
+  .project .project__description .view-live {
+    margin-top: 5px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 630px) {
+  .project .project__description {
+    padding: 25px;
+  }
+  .project .project__description h3 {
+    font-size: 26px;
+  }
+  .project .project__description hr {
+    margin-top: 5px;
+  }
+  .project .project__description p {
+    margin-top: 5px;
+    font-size: 19px;
+  }
+  .project .project__description .viev-code,
+  .project .project__description .view-live {
+    margin-top: 5px;
+    font-size: 25px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .project .project__description {
+    padding: 25px;
+  }
+  .project .project__description h3 {
     font-size: 27px;
   }
   .project .project__description hr {
