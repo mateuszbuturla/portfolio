@@ -1,16 +1,20 @@
 .footer
+    width: 90%
+    left: 50%
+    transform: translateX(-50%)
+    bottom: 40px
     position: absolute
     z-index: 1
     color: grey
     font-size: 15px
-    margin-left: 2em
-    bottom: 40px
 
 .media
+    width: 90%
+    left: 50%
+    transform: translateX(-50%)
     position: absolute
     z-index: 1
     font-size: 15px
-    margin-left: 2em
     bottom: 70px
     ul
         list-style: none
@@ -28,11 +32,13 @@
         font-size: 20px
 
 @media ( min-width: 1000px )
+    .footer 
+        font-size: 15px
     .media
-        margin-left: 0
+        transform: translateX(0)
         bottom: auto
-        top: 38%
-        right: 4%
+        top: 45%
+        left: 95%
         ul
             flex-direction: column
             li
