@@ -57,6 +57,27 @@
   transition: .3s;
 }
 
+.cursorContainer .cursor.cursorHoverEffect {
+  -webkit-transform: translate(calc(-50% + 5px), calc(-50% + 5px)) rotate(90deg);
+          transform: translate(calc(-50% + 5px), calc(-50% + 5px)) rotate(90deg);
+}
+
+.cursorContainer .cursor.cursorHoverEffectSmall::before {
+  bottom: 30px;
+}
+
+.cursorContainer .cursor.cursorHoverEffectSmall::after {
+  top: 30px;
+}
+
+.cursorContainer .cursor.cursorHoverEffectBig::before {
+  bottom: 90px;
+}
+
+.cursorContainer .cursor.cursorHoverEffectBig::after {
+  top: 90px;
+}
+
 .loadingScreen {
   position: absolute;
   width: 100%;

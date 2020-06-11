@@ -36,3 +36,13 @@
             height: 20px
             top: 20px
             transition: .3s
+        &.cursorHoverEffect
+            transform: translate(calc(-50% + 5px), calc(-50% + 5px)) rotate(90deg)
+        &.cursorHoverEffectSmall::before
+            bottom: 30px
+        &.cursorHoverEffectSmall::after
+            top: 30px
+        &.cursorHoverEffectBig::before
+            bottom: 90px
+        &.cursorHoverEffectBig::after
+            top: 90px

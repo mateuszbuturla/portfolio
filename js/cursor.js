@@ -1,10 +1,8 @@
-let xmouse, ymouse;
-document.addEventListener('mousemove', (e) => {
-    xmouse = e.clientX || e.pageX;
-    ymouse = e.clientY || e.pageY;
-});
+const cursor = document.getElementById('cursor');
+const buttonsSmall = document.querySelectorAll('#buttonSmall');
+const logo = document.querySelector('#logo');
 
-const cursor = document.getElementById('cursor')
+let xmouse, ymouse;
 let x = void 0,
     y = void 0,
     dx = void 0,
@@ -12,6 +10,32 @@ let x = void 0,
     tx = 0,
     ty = 0,
     key = -1;
+
+document.addEventListener('mousemove', (e) => {
+    xmouse = e.clientX || e.pageX;
+    ymouse = e.clientY || e.pageY;
+});
+
+buttonsSmall.forEach(item => {
+    item.addEventListener('mouseenter', () => {
+        cursor.classList.add('cursorHoverEffect')
+        cursor.classList.add('cursorHoverEffectSmall')
+    })
+    item.addEventListener('mouseleave', () => {
+        cursor.classList.remove('cursorHoverEffect')
+        cursor.classList.remove('cursorHoverEffectSmall')
+    })
+})
+
+logo.addEventListener('mouseenter', () => {
+    cursor.classList.add('cursorHoverEffect')
+    cursor.classList.add('cursorHoverEffectBig')
+})
+
+logo.addEventListener('mouseleave', () => {
+    cursor.classList.remove('cursorHoverEffect')
+    cursor.classList.remove('cursorHoverEffectBig')
+})
 
 let followMouse = () => {
     key = requestAnimationFrame(followMouse);
