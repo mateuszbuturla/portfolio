@@ -1,23 +1,24 @@
 .project
     position: relative
     .project__name
-        color: transparent
         position: relative
         font-size: 40px
-        -webkit-text-stroke: 1px #fff
         font-weight: bold
         text-transform: capitalize
+        a
+            color: transparent
+            -webkit-text-stroke: 1px #fff
     .project__image
         position: absolute
         opacity: 0
         transition: .3s
         transform: translate(20%,-50%)
-        z-index: 1
         width: 75vw
         height: auto
     &:hover
         .project__image
             opacity: 1
+            z-index: 5
 
 
 

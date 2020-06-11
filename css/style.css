@@ -33,6 +33,7 @@ a {
   transition: .3s transform;
   -webkit-transform: translate(calc(-50% + 5px), calc(-50% + 5px)) rotate(45deg);
           transform: translate(calc(-50% + 5px), calc(-50% + 5px)) rotate(45deg);
+  z-index: 2;
 }
 
 .cursorContainer .cursor::before {
@@ -273,12 +274,15 @@ a {
 }
 
 .project .project__name {
-  color: transparent;
   position: relative;
   font-size: 40px;
-  -webkit-text-stroke: 1px #fff;
   font-weight: bold;
   text-transform: capitalize;
+}
+
+.project .project__name a {
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
 }
 
 .project .project__image {
@@ -288,13 +292,13 @@ a {
   transition: .3s;
   -webkit-transform: translate(20%, -50%);
           transform: translate(20%, -50%);
-  z-index: 1;
   width: 75vw;
   height: auto;
 }
 
 .project:hover .project__image {
   opacity: 1;
+  z-index: 5;
 }
 
 @media (min-width: 414px) {
@@ -348,8 +352,11 @@ a {
 
 .media ul li {
   display: inline-block;
-  color: grey;
   margin: 0px 10px 0px 0px;
+}
+
+.media ul li a {
+  color: grey;
 }
 
 @media (min-width: 768px) {
@@ -409,19 +416,57 @@ html, body {
 }
 
 .button {
-  color: #fff;
   letter-spacing: 4px;
   font-size: 15px;
   position: relative;
   padding: 10px 20px;
   display: inline-block;
   border: 1px solid grey;
+  overflow: hidden;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.button a {
+  color: #fff;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #8A377E;
+  z-index: -1;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.button:hover {
+  border: 1px solid transparent;
+}
+
+.button:hover::before {
+  left: 0;
 }
 
 .button--2 {
-  background-color: #8A377E;
   margin-left: 20px;
-  border: 0px;
+  border: 1px solid transparent;
+}
+
+.button--2::before {
+  left: 0;
+}
+
+.button--2:hover {
+  border: 1px solid grey;
+}
+
+.button--2:hover::before {
+  left: 100%;
 }
 
 @media (min-width: 768px) {
