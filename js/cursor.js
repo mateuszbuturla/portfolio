@@ -1,5 +1,6 @@
 const cursor = document.getElementById('cursor');
 const buttonsSmall = document.querySelectorAll('#buttonSmall');
+const buttonsMedium = document.querySelectorAll('#buttonMedium');
 const logo = document.querySelector('#logo');
 
 let xmouse, ymouse;
@@ -24,6 +25,17 @@ buttonsSmall.forEach(item => {
     item.addEventListener('mouseleave', () => {
         cursor.classList.remove('cursorHoverEffect')
         cursor.classList.remove('cursorHoverEffectSmall')
+    })
+})
+
+buttonsMedium.forEach(item => {
+    item.addEventListener('mouseenter', () => {
+        cursor.classList.add('cursorHoverEffect')
+        cursor.classList.add('cursorHoverEffectMedium')
+    })
+    item.addEventListener('mouseleave', () => {
+        cursor.classList.remove('cursorHoverEffect')
+        cursor.classList.remove('cursorHoverEffectMedium')
     })
 })
 

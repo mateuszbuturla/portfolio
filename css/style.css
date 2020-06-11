@@ -7,6 +7,10 @@
   cursor: url("../img/cursor.png"), auto;
 }
 
+a {
+  text-decoration: none;
+}
+
 .cursorContainer {
   position: absolute;
   top: 0;
@@ -68,6 +72,14 @@
 
 .cursorContainer .cursor.cursorHoverEffectSmall::after {
   top: 30px;
+}
+
+.cursorContainer .cursor.cursorHoverEffectMedium::before {
+  bottom: 50px;
+}
+
+.cursorContainer .cursor.cursorHoverEffectMedium::after {
+  top: 50px;
 }
 
 .cursorContainer .cursor.cursorHoverEffectBig::before {
@@ -152,13 +164,35 @@
 }
 
 .mainNav .mainNav__logo {
-  color: #8A377E;
   font-size: 20px;
   font-weight: bold;
 }
 
+.mainNav .mainNav__logo a {
+  color: #8A377E;
+}
+
 .mainNav .mainNav__menu {
   display: none;
+  list-style: none;
+}
+
+.mainNav .mainNav__menu li a {
+  color: grey;
+}
+
+@media (min-width: 1000px) {
+  .mainNav .mainNav__menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+  }
+  .mainNav .mainNav__menu li {
+    margin-left: 20px;
+  }
 }
 
 .header {
