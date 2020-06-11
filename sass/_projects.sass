@@ -1,0 +1,35 @@
+.project
+    position: relative
+    .project__name
+        color: transparent
+        position: relative
+        font-size: 40px
+        -webkit-text-stroke: 1px #fff
+        font-weight: bold
+        text-transform: capitalize
+    .project__image
+        position: absolute
+        opacity: 0
+        transition: .3s
+        transform: translate(20%,-50%)
+        z-index: 1
+        width: 75vw
+        height: auto
+    &:hover
+        .project__image
+            opacity: 1
+
+
+
+@media ( min-width: 414px )
+    .project
+        .project__name
+            font-size: 45px
+
+@media ( min-width: 768px )
+    .project
+        .project__name
+            font-size: 8vh
+        .project__image
+            width: auto
+            height: 40vh

@@ -1,13 +1,12 @@
 window.onload = () => {
 
-    if (window.screen.width < 1000)
-    {
+    if (window.screen.width < 1000) {
         const t1 = new TimelineMax();
 
         t1.from("#loadingRing", 4, {
             delay: 0.4,
             opacity: 0,
-            y:40,
+            y: 40,
             ease: Expo.easeInOut
         }).to("#loadingRing", 4, {
             delay: 0,
@@ -77,14 +76,13 @@ window.onload = () => {
             ease: Expo.easeInOut
         });
     }
-    else
-    {
+    else {
         const t1 = new TimelineMax();
 
         t1.from("#loadingRing", 4, {
             delay: 0.4,
             opacity: 0,
-            y:40,
+            y: 40,
             ease: Expo.easeInOut
         }).to("#loadingRing", 4, {
             delay: 0.4,
@@ -125,6 +123,13 @@ window.onload = () => {
             y: 20,
             ease: Expo.easeInOut
         }, 0.1);
+
+        TweenMax.staggerFrom("#header .project", 2, {
+            delay: 7.7,
+            opacity: 0,
+            y: 20,
+            ease: Expo.easeInOut
+        }, 0.2);
 
         TweenMax.from("#line1", 3, {
             delay: 8.2,
