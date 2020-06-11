@@ -109,6 +109,17 @@
   margin-bottom: 20px;
 }
 
+@media (min-width: 375px) {
+  .header .header__header {
+    font-size: 35px;
+  }
+  .header .header__description {
+    width: 300px;
+    line-height: 26px;
+    font-size: 17px;
+  }
+}
+
 .footer {
   position: absolute;
   z-index: 1;
