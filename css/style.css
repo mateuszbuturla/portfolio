@@ -4,6 +4,57 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
+  cursor: url("../img/cursor.png"), auto;
+}
+
+.cursorContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.cursorContainer .cursor {
+  width: 40px;
+  height: 40px;
+  background: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: 0px;
+  pointer-events: none;
+  -webkit-transition: .3s transform;
+  transition: .3s transform;
+  -webkit-transform: translate(calc(-50% + 5px), calc(-50% + 5px)) rotate(45deg);
+          transform: translate(calc(-50% + 5px), calc(-50% + 5px)) rotate(45deg);
+}
+
+.cursorContainer .cursor::before {
+  content: '';
+  position: absolute;
+  border-top: 1px solid grey;
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+  width: 100%;
+  height: 20px;
+  bottom: 20px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.cursorContainer .cursor::after {
+  content: '';
+  position: absolute;
+  border-bottom: 1px solid grey;
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+  width: 100%;
+  height: 20px;
+  top: 20px;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .loadingScreen {
