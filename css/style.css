@@ -129,7 +129,7 @@
 
 @media (min-width: 1000px) {
   .loader__ring {
-    width: 25%;
+    width: 20%;
   }
 }
 
@@ -221,13 +221,16 @@
 }
 
 @media (min-width: 1200px) {
+  .header {
+    left: 55%;
+  }
   .header .header__header {
     font-size: 40px;
   }
   .header .header__description {
     width: 650px;
     line-height: 28px;
-    font-size: 18px;
+    font-size: 15px;
   }
 }
 
@@ -348,11 +351,11 @@ html, body {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
   .button {
-    font-size: 17px;
-    padding: 10px 25px;
-    font-weight: lighter;
+    font-size: 15px;
+    padding: 15px 30px;
+    font-weight: bold;
   }
 }
 /*# sourceMappingURL=style.css.map */
