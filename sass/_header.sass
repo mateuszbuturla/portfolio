@@ -1,139 +1,57 @@
-.header 
-    position: relative
-    width: 100vw
-    height: 100vh
-    //background-image: url('../img/header.png')
-    //background-position: center
-    //background-repeat: no-repeat
-    //background-size: cover
-    background-color: white !important
-    padding-top: 30%
-    padding-left: 5%
-    overflow: hidden
-    .header__text
-        h1
+.header
+    width: 90%
+    position: absolute
+    top: 46%
+    left: 50%
+    transform: translate(-50%, -50%)
+    z-index: 1
+    .header__header
+        color: #fff
+        font-weight: 900
+        font-size: 30px
+        text-transform: uppercase
+        margin-bottom: 25px
+    .header__description
+        width: 250px
+        color: rgb(95, 95, 95)
+        line-height: 24px
+        font-size: 15px
+        margin-bottom: 20px
+    .header__buttons
+
+@media ( min-width: 375px )
+    .header
+        .header__header
             font-size: 35px
-            color: $maincolor
-        p
-            font-size: 25px
-            color: $maincolor
+        .header__description
+            width: 300px
+            line-height: 26px
+            font-size: 17px
 
-.header__header-bg-5
-    position: absolute
-    top: 0
-    left: 0
-    width: 100%
-    height: 100%
-    background-image: url('../img/5.png')
-    background-position: center
-    background-repeat: no-repeat
-    background-size: cover
+@media ( min-width: 768px )
+    .header
+        .header__header
+            font-size: 45px
+        .header__description
+            width: 500px
+            line-height: 31px
+            font-size: 22px
 
-.header__header-bg-4
-    position: absolute
-    top: 0
-    left: 0
-    width: 100%
-    height: 100%
-    background-image: url('../img/4.png')
-    background-position: center
-    background-repeat: no-repeat
-    background-size: cover
+@media ( min-width: 1000px )
+    .header
+        .header__header
+            font-size: 40px
+        .header__description
+            width: 500px
+            line-height: 31px
+            font-size: 22px
 
-.header__header-bg-3
-    position: absolute
-    top: 0
-    left: 0
-    width: 100%
-    height: 100%
-    background-image: url('../img/3.png')
-    background-position: center
-    background-repeat: no-repeat
-    background-size: cover
-
-.header__header-bg-2
-    position: absolute
-    top: 0
-    left: 0
-    width: 100%
-    height: 100%
-    background-image: url('../img/2.png')
-    background-position: center
-    background-repeat: no-repeat
-    background-size: cover
-
-.header__header-bg-1
-    position: absolute
-    top: 0
-    left: 0
-    width: 100%
-    height: 100%
-    background-image: url('../img/1.png')
-    background-position: center
-    background-repeat: no-repeat
-    background-size: cover
-
-@media (orientation: landscape)
-    .header 
-        padding-top: 5%
-        padding-left: 10%
-        .header__text
-            h1
-                font-size: 35px
-            p
-                font-size: 25px
-
-@media screen and ( min-width: 375px ) and (orientation: portrait)
-    .header 
-        .header__text
-            h1
-                font-size: 40px
-            p
-                font-size: 30px
-
-@media screen and ( min-width: 760px ) and (orientation: portrait)
-    .header 
-        .header__text
-            h1
-                font-size: 60px
-            p
-                font-size: 40px
-
-@media screen and ( min-width: 1024px ) and (orientation: portrait)
-    .header 
-        .header__text
-            h1
-                font-size: 80px
-            p
-                font-size: 55px
-
-@media screen and ( min-width: 640px ) and (orientation: landscape)
-    .header 
-        .header__text
-            h1
-                font-size: 40px
-            p
-                font-size: 30px
-
-@media screen and ( min-width: 1024px ) and (orientation: landscape)
-    .header 
-        .header__text
-            h1
-                font-size: 80px
-            p
-                font-size: 55px
-
-@media screen and ( min-width: 1366px ) and (orientation: landscape)
-    .header 
-        padding-top: 10%
-        padding-left: 10%
-
-@media screen and ( min-width: 1440px ) and (orientation: landscape)
-    .header 
-        padding-top: 8%
-        padding-left: 10%
-        .header__text
-            h1
-                font-size: 70px
-            p
-                font-size: 50px
+@media ( min-width: 1200px )
+    .header
+        left: 55%
+        .header__header
+            font-size: 40px
+        .header__description
+            width: 650px
+            line-height: 28px
+            font-size: 15px
