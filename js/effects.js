@@ -1,84 +1,80 @@
-//********************My skills********************
-const swiperSkills = new Swiper('.swiper-container', {
-    effect: 'coverflow',
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: 'auto',
-    initialSlide: 2,
-    coverflowEffect: {
-        rotate: 10,
-        stretch: 0,
-        depth: 300,
-        modifier: 1,
-        slideShadows: false,
-    },
-    pagination: {
-        el: '.swiper-pagination',
-    },
-});
+window.onload = () => {
 
-//********************Gsap********************
-TweenMax.from(".header__text h1", 1, {
-    delay: 0,
-    opacity: 0,
-    y: 20,
-    ease: Expo.easeInOut
-});
+    if (window.screen.width < 900)
+    {
+        const t1 = new TimelineMax();
 
-TweenMax.from(".header__text p", 1, {
-    delay: 0.5,
-    opacity: 0,
-    y: 20,
-    ease: Expo.easeInOut
-});
-
-document.addEventListener('scroll', () => {
-    if (window.scrollY >= document.querySelector('.about-me').offsetTop + 200) {
-        TweenMax.to(".about-me .section__name", 1, {
+        t1.from("#loadingRing", 4, {
+            delay: 0.4,
+            opacity: 0,
+            y:40,
+            ease: Expo.easeInOut
+        }).to("#loadingRing", 4, {
             delay: 0,
-            opacity: 1,
-            y: -20,
+            top: "-100%",
+            ease: Expo.easeInOut
+        })
+
+        TweenMax.to("#loadingScreen", 4, {
+            delay: 4.4,
+            top: "-110%",
             ease: Expo.easeInOut
         });
-        TweenMax.to(".about-me .avatar", 1, {
-            delay: 0.5,
-            opacity: 1,
-            y: -20,
+
+        TweenMax.from("#logo", 3, {
+            delay: 5.4,
+            opacity: 0,
+            y: 20,
             ease: Expo.easeInOut
         });
-        TweenMax.to(".about-me__desctiprion", 1, {
-            delay: 1,
-            opacity: 1,
-            y: -20,
+
+        TweenMax.from("#header", 3, {
+            delay: 6,
+            opacity: 0,
+            y: 20,
+            ease: Expo.easeInOut
+        });
+
+        TweenMax.from("#footer", 3, {
+            delay: 5.7,
+            opacity: 0,
+            y: 20,
+            ease: Expo.easeInOut
+        });
+
+        TweenMax.staggerFrom("#media ul li", 2, {
+            delay: 5.7,
+            opacity: 0,
+            y: 20,
+            ease: Expo.easeInOut
+        }, 0.1);
+
+        TweenMax.from("#line1", 3, {
+            delay: 6.2,
+            opacity: 0,
+            y: 20,
+            ease: Expo.easeInOut
+        });
+
+        TweenMax.from("#line2", 3, {
+            delay: 6.4,
+            opacity: 0,
+            y: 20,
+            ease: Expo.easeInOut
+        });
+
+        TweenMax.from("#button1", 3, {
+            delay: 5.6,
+            opacity: 0,
+            y: 20,
+            ease: Expo.easeInOut
+        });
+
+        TweenMax.from("#button2", 3, {
+            delay: 6,
+            opacity: 0,
+            y: 20,
             ease: Expo.easeInOut
         });
     }
-    if (window.scrollY >= document.querySelector('.my-skills').offsetTop + 200) {
-        TweenMax.to(".my-skills .section__name", 1, {
-            delay: 0,
-            opacity: 1,
-            y: -20,
-            ease: Expo.easeInOut
-        });
-        TweenMax.to(".my-skills .swiper-container", 1, {
-            delay: 0.5,
-            opacity: 1,
-            y: -20,
-            ease: Expo.easeInOut
-        });
-    }
-    if (window.scrollY >= document.querySelector('.my-projects').offsetTop + 200) {
-        TweenMax.to(".my-projects .section__name", 1, {
-            delay: 0,
-            opacity: 1,
-            y: -20,
-            ease: Expo.easeInOut
-        });
-        TweenMax.to(".my-projects .section__flex-pr", 1, {
-            delay: 0.5,
-            opacity: 1,
-            y: -20,
-            ease: Expo.easeInOut
-        });
-    }
-});
+}
