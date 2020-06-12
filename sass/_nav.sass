@@ -7,22 +7,93 @@
     position: relative
     left: 50%
     transform: translateX(-50%)
+    z-index: 1
     .mainNav__logo
         font-size: 20px
         font-weight: bold
         a
             color: #8A377E
     .mainNav__menu
-        display: none
         list-style: none
+        background-color: #121212
+        position: absolute
+        top: 70px
+        right: -115%
+        width: 100vw
+        height: calc( 100vh - 70px )
+        padding-top: 5%
+        transition: 1s cubic-bezier(.48, -0.28, 0.41, 1.4) right
+        &.mainNav__menu--active
+            right: -5%
         li
+            color: #fff
+            font-size: 35px
+            text-transform: uppercase
+            font-weight: bold
+            margin-left: 5%
             a
-                color: grey
+                font-size: 50px
+                color: transparent
+                -webkit-text-stroke: 1px #fff
+
+.burgerMenu
+    position: absolute
+    top: 35px
+    right: 10px
+    background-color: transparent
+    border: 0
+    width: 40px
+    height: 40px
+    transform: translate(-50%, -50%)
+    z-index: 2
+    .burgerMenu__line1
+        position: absolute
+        width: 100%
+        height: 3px
+        background-color: grey
+        top: 10px
+        left: 0px
+        transition: .5s
+    .burgerMenu__line2
+        position: absolute
+        width: 100%
+        height: 3px
+        background-color: grey
+        bottom: 10px
+        left: 0px
+        transition: .5s
+    &.burgerMenu--active
+        .burgerMenu__line1
+            top: 50%
+            transform: translateY(-50%) rotate(45deg)
+        .burgerMenu__line2
+            bottom: 50%
+            transform: translateY(50%) rotate(-45deg)
+            
+
 
 @media ( min-width: 1000px )
     .mainNav
         .mainNav__menu
             display: flex
             justify-content: right
+            align-items: center
+            position: relative
+            top: auto
+            right: auto
+            width: auto
+            height: auto
+            padding-top: 0
+            .mainNav__mobileOnly
+                display: none
             li
                 margin-left: 20px
+                display: flex
+                align-items: center
+                a
+                    color: grey
+                    font-size: 15px
+                    -webkit-text-stroke: 0px
+                    text-transform: none
+    .burgerMenu
+        display: none
