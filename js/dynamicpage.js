@@ -173,6 +173,15 @@ $(function () {
                     switch (newHash) {
                         case 'index.html':
                             HomePageInEffect();
+                            $('#headerButtons').delegate("a", "click", function () {
+                                oldHash = window.location.hash.substring(1);
+
+                                if (oldHash === '')
+                                    oldHash = window.location.pathname.substring(1);
+
+                                window.location.hash = $(this).attr("href");
+                                return false;
+                            });
                             break;
                         case 'projects.html':
                             ProjectsInEffect();
@@ -181,7 +190,6 @@ $(function () {
                             ContactInEffect();
                             break;
                     }
-
                 });
             };
         }, 2000)
