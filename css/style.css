@@ -423,8 +423,8 @@ html, body {
   display: inline-block;
   border: 1px solid grey;
   overflow: hidden;
-  -webkit-transition: .5s;
-  transition: .5s;
+  -webkit-transition: .5s border;
+  transition: .5s border;
 }
 
 .button a {

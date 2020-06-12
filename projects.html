@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mateusz Buturla - Portfolio</title>
     <link rel="icon" href="img/dragonRing.png" type="image/icon type">
+    <meta name="Description" content="Cześć. Zobacz projekty, które tworzę.">
+    <meta name="google-site-verification" content="l-59_Mik-OjN6Rn0r1jlhemUJX4BVZyCB3GVPW4GKOo" />
 
     <link
         href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap"
@@ -13,9 +15,39 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
 
     <link rel="stylesheet" href="css/style.css">
+
+    <script type='text/javascript' src='js/jquery.ba-hashchange.min.js'></script>
+    <script type='text/javascript' src='js/dynamicpage.js'></script>
+
+    <!-- Google Analytics -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-XXXXX-Y', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <!-- End Google Analytics -->
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5DMFNGR');</script>
+    <!-- End Google Tag Manager -->
 </head>
 
 <body>
@@ -47,40 +79,44 @@
 
     </nav>
 
-    <header class="header" id="header">
-        <div class="project">
-            <p class="project__name">
-                <a href="https://mb-japan-tour.herokuapp.com/" target="_blanc">Japan Tour</a></p>
-            <img class="project__image" src="img/japantour.png" alt="Japan Tour" />
-        </div>
-        <div class="project">
-            <p class="project__name">
-                <a href="https://mb-tropical-plants.herokuapp.com/" target="_blanc">Tropical Plants</a></p>
-            <img class="project__image" src="img/tropicalplants.png" alt="Tropical Plants" />
-        </div>
-        <div class="project">
-            <p class="project__name">
-                <a href="https://mb-flashcard.herokuapp.com/" target="_blanc">Flashcards</a></p>
-            <img class="project__image" src="img/flashcard.PNG" alt="Flashcards" />
-        </div>
-        <div class="project">
-            <p class="project__name">
-                <a href="https://www.linkedin.com/in/mateusz-buturla-4b22a6192/" target="_blanc">Edumat</a></p>
-            <img class="project__image" src="img/edumat.png" alt="Edumat" />
-        </div>
-        <div class="project">
-            <p class="project__name">
-                <a href="https://mateuszbuturla.github.io/weather-app/" target="_blanc">Weather.App</a></p>
-            <img class="project__image" src="img/weatherapp.png" alt="Weather.App" />
-        </div>
-        <div class="project">
-            <p class="project__name">
-                <a href="https://mb-blog-app.herokuapp.com/" target="_blanc">Blog.App</a></p>
-            <img class="project__image" src="img/blogapp.png" alt="Blog.App" />
-        </div>
-        <div class="project">
-            <p class="project__name"><a href="https://pizzeriasalomon.herokuapp.com/" target="_blanc">Pizzeria Salomon</p>
-            <img class="project__image" src="img/pizzeriasalomon.png" alt="Pizzeria Salomon" />
+    <header class="header" id="mainContainer">
+        <div id="mainContent">
+            <div id="projectsContainer">
+                <div class="project">
+                    <p class="project__name">
+                        <a href="https://mb-japan-tour.herokuapp.com/" target="_blanc">Japan Tour</a></p>
+                    <img class="project__image" src="img/japantour.png" alt="Japan Tour" />
+                </div>
+                <div class="project">
+                    <p class="project__name">
+                        <a href="https://mb-tropical-plants.herokuapp.com/" target="_blanc">Tropical Plants</a></p>
+                    <img class="project__image" src="img/tropicalplants.png" alt="Tropical Plants" />
+                </div>
+                <div class="project">
+                    <p class="project__name">
+                        <a href="https://mb-flashcard.herokuapp.com/" target="_blanc">Flashcards</a></p>
+                    <img class="project__image" src="img/flashcard.PNG" alt="Flashcards" />
+                </div>
+                <div class="project">
+                    <p class="project__name">
+                        <a href="https://www.linkedin.com/in/mateusz-buturla-4b22a6192/" target="_blanc">Edumat</a></p>
+                    <img class="project__image" src="img/edumat.png" alt="Edumat" />
+                </div>
+                <div class="project">
+                    <p class="project__name">
+                        <a href="https://mateuszbuturla.github.io/weather-app/" target="_blanc">Weather.App</a></p>
+                    <img class="project__image" src="img/weatherapp.png" alt="Weather.App" />
+                </div>
+                <div class="project">
+                    <p class="project__name">
+                        <a href="https://mb-blog-app.herokuapp.com/" target="_blanc">Blog.App</a></p>
+                    <img class="project__image" src="img/blogapp.png" alt="Blog.App" />
+                </div>
+                <div class="project">
+                    <p class="project__name"><a href="https://pizzeriasalomon.herokuapp.com/" target="_blanc">Pizzeria Salomon</p>
+                    <img class="project__image" src="img/pizzeriasalomon.png" alt="Pizzeria Salomon" />
+                </div>
+            </div>
         </div>
     </header>
 
@@ -88,21 +124,27 @@
         <ul>
             <li id="buttonSmall">
                 <a href="mailto:2002mateuszbuturla@gmail.com" target="_blanc"><i class="fas fa-paper-plane"></i></a>
-                </li>
-                <li id="buttonSmall">
-                    <a href="https://www.linkedin.com/in/mateusz-buturla-4b22a6192/" target="_blanc"><i class="fab fa-linkedin"></i></a>
-                </li>
-                <li id="buttonSmall">
-                    <a href="https://github.com/mateuszbuturla" target="_blanc"><i class="fab fa-github"></i></a></li>
-                </ul>
-        </div>
+                        </li>
+                        <li id="buttonSmall">
+                            <a href="https://www.linkedin.com/in/mateusz-buturla-4b22a6192/" target="_blanc"><i class="fab fa-linkedin"></i></a>
+                        </li>
+                        <li id="buttonSmall">
+                            <a href="https://github.com/mateuszbuturla" target="_blanc"><i class="fab fa-github"></i></a>
+                        </li>
+                        </ul>
+                </div>
 
-        <footer class="footer" id="footer">
-            Mateusz Buturla 2020
-        </footer>
+                <footer class="footer" id="footer">
+                    Mateusz Buturla 2020
+                </footer>
 
-        <script src="js/effects.js"></script>
-        <script src="js/cursor.js"></script>
+                <script src="js/effects.js"></script>
+                <script src="js/cursor.js"></script>
+
+                <!-- Google Tag Manager (noscript) -->
+                <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5DMFNGR" height="0" width="0"
+                        style="display:none;visibility:hidden"></iframe></noscript>
+                <!-- End Google Tag Manager (noscript) -->
 
 </body>
 
