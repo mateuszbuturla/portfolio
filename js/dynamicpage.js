@@ -156,14 +156,14 @@ $(function () {
         newHash = window.location.hash.substring(1);
 
         switch (oldHash) {
+            case 'index.html':
+                HomePageOutEffect();
+                break;
             case 'projects.html':
                 ProjectsOutEffect();
                 break;
             case 'contact.html':
                 ContactOutEffect();
-                break;
-            default:
-                HomePageOutEffect();
                 break;
         }
 
