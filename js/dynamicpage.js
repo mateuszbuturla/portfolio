@@ -142,7 +142,7 @@ $(function () {
     let newHash = '';
     const $mainContent = $("#mainContainer")
 
-    $("nav").delegate("a", "click", function () {
+    $('nav, #headerButtons').delegate("a", "click", function () {
         oldHash = window.location.hash.substring(1);
 
         if (oldHash === '')
