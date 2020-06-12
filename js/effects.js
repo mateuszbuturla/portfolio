@@ -124,7 +124,7 @@ window.onload = () => {
             ease: Expo.easeInOut
         }, 0.1);
 
-        TweenMax.staggerFrom("#header .project", 2, {
+        TweenMax.staggerFrom("#projectsContainer .project", 2, {
             delay: 7.7,
             opacity: 0,
             y: 20,
