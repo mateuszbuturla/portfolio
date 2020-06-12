@@ -74,12 +74,19 @@
 
         <p class="mainNav__logo" id="logo"><a href="index.html">Mateusz Buturla</a></p>
 
-        <ul class="mainNav__menu">
+        <ul class="mainNav__menu" id="mainMenu">
+            <li id="buttonMedium" class="mainNav__mobileOnly">Menu</li>
+            <li id="buttonMedium" class="mainNav__mobileOnly"><a href="index.html">Home</a></li>
             <li id="buttonMedium"><a href="projects.html">Projekty</a></li>
             <li id="buttonMedium"><a href="contact.html">Kontakt</a></li>
         </ul>
 
     </nav>
+
+    <button class="burgerMenu" id="burgerMenu">
+        <div class="burgerMenu__line1"></div>
+        <div class="burgerMenu__line2"></div>
+    </button>
 
     <header class="header" id="mainContainer">
         <div id="mainContent">
@@ -118,6 +125,7 @@
 
     <script src="js/effects.js"></script>
     <script src="js/cursor.js"></script>
+    <script src='js/menu.js'></script>
 
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5DMFNGR" height="0" width="0"
