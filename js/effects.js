@@ -103,6 +103,13 @@ window.onload = () => {
             ease: Expo.easeInOut
         });
 
+        TweenMax.staggerFrom("#mainMenu li", 2, {
+            delay: 7.6,
+            opacity: 0,
+            y: 20,
+            ease: Expo.easeInOut
+        }, 0.2);
+
         TweenMax.from("#header", 3, {
             delay: 8,
             opacity: 0,
@@ -160,3 +167,36 @@ window.onload = () => {
         });
     }
 }
+
+window.addEventListener("resize", () => {
+
+    TweenMax.set("#logo", { y: 0 });
+    TweenMax.set("#logo", { clearProps: "y" });
+
+    TweenMax.set("#header", { y: 0 });
+    TweenMax.set("#header", { clearProps: "y" });
+
+    TweenMax.set("#footer", { y: 0 });
+    TweenMax.set("#footer", { clearProps: "y" });
+
+    TweenMax.set("#media ul li", { y: 0 });
+    TweenMax.set("#media ul li", { clearProps: "y" });
+
+    TweenMax.set("#mainMenu li", { y: 0 });
+    TweenMax.set("#mainMenu li", { clearProps: "y" });
+
+    TweenMax.set("#projectsContainer .project", { y: 0 });
+    TweenMax.set("#projectsContainer .project", { clearProps: "y" });
+
+    TweenMax.set("#line1", { y: 0 });
+    TweenMax.set("#line1", { clearProps: "y" });
+
+    TweenMax.set("#line2", { y: 0 });
+    TweenMax.set("#line2", { clearProps: "y" });
+
+    TweenMax.set("#button1", { y: 0 });
+    TweenMax.set("#button1", { clearProps: "y" });
+
+    TweenMax.set("#button2", { y: 0 });
+    TweenMax.set("#button2", { clearProps: "y" });
+});
