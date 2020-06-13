@@ -12,6 +12,7 @@ a {
 }
 
 .cursorContainer {
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -89,6 +90,12 @@ a {
 
 .cursorContainer .cursor.cursorHoverEffectBig::after {
   top: 90px;
+}
+
+@media (min-width: 1000px) {
+  .cursorContainer {
+    display: block;
+  }
 }
 
 .loadingScreen {
