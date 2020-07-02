@@ -15,10 +15,13 @@
         transform: translate(20%,-50%)
         width: 75vw
         height: auto
+        pointer-events: none
     &:hover
         .project__image
             opacity: 1
             z-index: 5
+        & ~.project
+            z-index: -1
 
 
 
