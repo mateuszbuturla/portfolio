@@ -1,3 +1,3 @@
-import HomeHeader from './homeHeader';
+import IntroSection from './introSection';
 
-export { HomeHeader }
+export { IntroSection };

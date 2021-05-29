@@ -1,3 +1,3 @@
 import Door from './door';
 
-export {Door};
+export { Door };
