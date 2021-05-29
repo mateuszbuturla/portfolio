@@ -13,5 +13,3 @@ const StyledDoor = styled.img`
 `;
 
 export { StyledDoor };
-
-//position: 'absolute', top: '50vh', left: '40.5vw', transform: 'translate(-50%, -50%)', width: '16.3vw'

@@ -28,7 +28,7 @@ const StyledParagraph = styled.p`
     color: ${props => props.theme.colors.fontSecond};
     font-size: 1vw;
     margin: 5vh 0px 0px 0px;
-    max-width: 20vw;
+    max-width: 16vw;
 `;
 
 const StyledGetInTouch = styled.button`

@@ -2,8 +2,12 @@ import React, { useEffect, useRef } from 'react';
 import ScrollMagic from 'scrollmagic';
 import 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap';
 import 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators';
-import { Door } from '../../components/common';
-import { IntroSection, IntroSectionContent } from '../../components/layout';
+import { Door, Avatar } from '../../components/common';
+import {
+  IntroSection,
+  IntroSectionContent,
+  AboutMe,
+} from '../../components/layout';
 
 function Home() {
   const introRef = useRef(null);
@@ -24,10 +28,13 @@ function Home() {
   return (
     <>
       <IntroSection ref={introRef}>
-        <Door from="43.1vw" to="35vw" direction="left" introRef={introRef} />
-        <Door from="43.1vw" to="35vw" direction="right" introRef={introRef} />
+        <Door from="43.1vw" to="30vw" direction="left" introRef={introRef} />
+        <Door from="43.1vw" to="30vw" direction="right" introRef={introRef} />
+        <Avatar introRef={introRef} />
       </IntroSection>
       <IntroSectionContent />
+      <AboutMe />
+      <div style={{ height: '200vh' }}></div>
     </>
   );
 }
