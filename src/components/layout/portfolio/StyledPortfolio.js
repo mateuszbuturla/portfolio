@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+const StyledPorfolioWrapper = styled.div`
+    position: relative;
+`;
+
 const StyledPorfolioContainer = styled.section`
     position: relative;
 `;
@@ -10,4 +14,4 @@ const StyledProjectContainer = styled.div`
   left: ${(props) => (props.first ? '0' : '100%')};
 `;
 
-export { StyledPorfolioContainer, StyledProjectContainer };
+export { StyledPorfolioWrapper, StyledPorfolioContainer, StyledProjectContainer };

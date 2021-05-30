@@ -5,6 +5,7 @@ import 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap';
 import 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators';
 import { Project } from '../../common';
 import {
+  StyledPorfolioWrapper,
   StyledPorfolioContainer,
   StyledProjectContainer,
 } from './StyledPortfolio';
@@ -15,44 +16,64 @@ function Portfolio() {
   const refProject2 = useRef(null);
   const refProject3 = useRef(null);
   const refProject4 = useRef(null);
+  const refProject1Trigger = useRef(null);
+  const refProject2Trigger = useRef(null);
+  const refProject3Trigger = useRef(null);
+  const refProject4Trigger = useRef(null);
 
   useEffect(() => {
-    var controller = new ScrollMagic.Controller();
+    const controller = new ScrollMagic.Controller();
 
-    var horizontalSlide = new TimelineMax()
-      // animate panels
+    const horizontalSlide = new TimelineMax()
       .to(refProject1.current, 1, { left: '-100%' })
       .to(refProject2.current, 1, { left: '-100%' })
       .to(refProject3.current, 1, { left: '-100%' })
       .to(refProject4.current, 1, { left: '-100%' });
 
-    // create scene to pin and link animation
     new ScrollMagic.Scene({
       triggerElement: refContainer.current,
       triggerHook: 'onLeave',
-      duration: '400%',
+      duration: '800%',
     })
       .setPin(refContainer.current)
       .setTween(horizontalSlide)
-      //.addIndicators() // add indicators (requires plugin)
+      .addIndicators()
       .addTo(controller);
   }, []);
 
   return (
-    <StyledPorfolioContainer ref={refContainer}>
-      <StyledProjectContainer ref={refProject1} first>
-        <Project />
-      </StyledProjectContainer>
-      <StyledProjectContainer ref={refProject2}>
-        <Project />
-      </StyledProjectContainer>
-      <StyledProjectContainer ref={refProject3}>
-        <Project />
-      </StyledProjectContainer>
-      <StyledProjectContainer ref={refProject4}>
-        <Project />
-      </StyledProjectContainer>
-    </StyledPorfolioContainer>
+    <StyledPorfolioWrapper>
+      <StyledPorfolioContainer ref={refContainer}>
+        <StyledProjectContainer ref={refProject1} first>
+          <Project trigger={refProject1Trigger} />
+        </StyledProjectContainer>
+        <StyledProjectContainer ref={refProject2}>
+          <Project trigger={refProject2Trigger} />
+        </StyledProjectContainer>
+        <StyledProjectContainer ref={refProject3}>
+          <Project trigger={refProject3Trigger} />
+        </StyledProjectContainer>
+        <StyledProjectContainer ref={refProject4}>
+          <Project trigger={refProject4Trigger} />
+        </StyledProjectContainer>
+      </StyledPorfolioContainer>
+      <div
+        style={{ position: 'absolute', top: '0', height: '100vh' }}
+        ref={refProject1Trigger}
+      />
+      <div
+        style={{ position: 'absolute', top: '100vh', height: '100vh' }}
+        ref={refProject2Trigger}
+      />
+      <div
+        style={{ position: 'absolute', top: '200vh', height: '100vh' }}
+        ref={refProject3Trigger}
+      />
+      <div
+        style={{ position: 'absolute', top: '300vh', height: '100vh' }}
+        ref={refProject4Trigger}
+      />
+    </StyledPorfolioWrapper>
   );
 }
 
