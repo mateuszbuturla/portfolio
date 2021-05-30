@@ -7,6 +7,7 @@ import {
   IntroSection,
   IntroSectionContent,
   AboutMe,
+  Portfolio,
 } from '../../components/layout';
 
 function Home() {
@@ -34,6 +35,7 @@ function Home() {
       </IntroSection>
       <IntroSectionContent />
       <AboutMe />
+      <Portfolio />
       <div style={{ height: '200vh' }}></div>
     </>
   );
