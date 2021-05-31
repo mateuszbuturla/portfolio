@@ -14,7 +14,7 @@ import {
 
 import thumbnail from '../../../assets/thumbnail.png';
 
-function Project({ trigger }) {
+function Project({ trigger, color }) {
   const refThumbnail = useRef(null);
   const refProjectName = useRef(null);
   const refProjectCategory = useRef(null);
@@ -34,21 +34,62 @@ function Project({ trigger }) {
       1,
       {
         opacity: 1,
-        delay: 0.5,
       },
     );
     new ScrollMagic.Scene({
       triggerElement: trigger.current,
-      triggerHook: 0,
+      triggerHook: 0.8,
       duration: '100%',
     })
       .setTween(tt)
-      .addIndicators()
+      .addIndicators({ colorStart: 'yellow', colorEnd: 'yellow' })
       .addTo(controller);
+
+    const tt2 = TweenMax.to(
+      [
+        refProjectNumber.current,
+        refProjectCategory.current,
+        refProjectName.current,
+        refProjectTechnologies.current,
+      ],
+      0.4,
+      {
+        opacity: 0,
+      },
+    );
+    new ScrollMagic.Scene({
+      triggerElement: trigger.current,
+      triggerHook: 0.45,
+      duration: '100%',
+    })
+      .setTween(tt2)
+      .addIndicators({ colorStart: 'yellow', colorEnd: 'yellow' })
+      .addTo(controller);
+
+    // const tt2 = TweenMax.to(
+    //   [
+    //     refProjectNumber.current,
+    //     refProjectCategory.current,
+    //     refProjectName.current,
+    //     refProjectTechnologies.current,
+    //   ],
+    //   1,
+    //   {
+    //     opacity: 0,
+    //   },
+    // );
+    // new ScrollMagic.Scene({
+    //   triggerElement: trigger.current,
+    //   triggerHook: 0.8,
+    //   duration: '100%',
+    // })
+    //   .setTween(tt2)
+    //   .addIndicators()
+    //   .addTo(controller);
   }, []);
 
   return (
-    <StyledProjectContainer>
+    <StyledProjectContainer color={color}>
       <StyledProjectImage src={thumbnail} ref={refThumbnail} />
       <StyledProjectName ref={refProjectName}>Project name</StyledProjectName>
       <StyledProjectCategory ref={refProjectCategory}>

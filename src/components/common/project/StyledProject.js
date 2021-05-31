@@ -4,6 +4,8 @@ const StyledProjectContainer = styled.div`
     width: 100vw;
     height: 100vh;
     position: relative;
+    background-color: ${props => props.color};
+
 `;
 
 const StyledProjectImage = styled.img`
