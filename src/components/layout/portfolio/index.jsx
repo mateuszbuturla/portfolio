@@ -25,10 +25,10 @@ function Portfolio() {
     const controller = new ScrollMagic.Controller();
 
     const horizontalSlide = new TimelineMax()
-      .to(refProject1.current, 1, { left: '-100%' })
-      .to(refProject2.current, 1, { left: '-100%' })
-      .to(refProject3.current, 1, { left: '-100%' })
-      .to(refProject4.current, 1, { left: '-100%' });
+      .to(refProject1.current, 1, { left: '-400%' })
+      .to(refProject2.current, 1, { left: '-300%', delay: -1 })
+      .to(refProject3.current, 1, { left: '-200%', delay: -1 })
+      .to(refProject4.current, 1, { left: '-100%', delay: -1 });
 
     new ScrollMagic.Scene({
       triggerElement: refContainer.current,
@@ -44,16 +44,16 @@ function Portfolio() {
   return (
     <StyledPorfolioWrapper>
       <StyledPorfolioContainer ref={refContainer}>
-        <StyledProjectContainer ref={refProject1} first>
+        <StyledProjectContainer ref={refProject1} left={1}>
           <Project trigger={refProject1Trigger} />
         </StyledProjectContainer>
-        <StyledProjectContainer ref={refProject2}>
+        <StyledProjectContainer ref={refProject2} left={2}>
           <Project trigger={refProject2Trigger} />
         </StyledProjectContainer>
-        <StyledProjectContainer ref={refProject3}>
+        <StyledProjectContainer ref={refProject3} left={3}>
           <Project trigger={refProject3Trigger} />
         </StyledProjectContainer>
-        <StyledProjectContainer ref={refProject4}>
+        <StyledProjectContainer ref={refProject4} left={4}>
           <Project trigger={refProject4Trigger} />
         </StyledProjectContainer>
       </StyledPorfolioContainer>

@@ -20,6 +20,7 @@ const StyledProjectName = styled.h3`
     bottom: 15vh;
     left: 15vw;
     font-size: 10vh;
+    opacity:0;
 `;
 
 const StyledProjectCategory = styled.p`
@@ -29,6 +30,7 @@ const StyledProjectCategory = styled.p`
     bottom: 25vh;
     left: 15vw;
     font-size: 6vh;
+    opacity:0;
 `;
 
 const StyledProjectNumber = styled.div`
@@ -38,6 +40,7 @@ const StyledProjectNumber = styled.div`
     left: 23vw;
     font-size: 7vh;
     transform: translateY(-50%);
+    opacity:0;
 
     hr {
         transform: rotate(-15deg);
@@ -52,6 +55,7 @@ const StyledProjectTechnologies = styled.div`
     left: 80vw;
     color: ${props => props.theme.colors.fontFirst};
     font-size: 3vh;
+    opacity:0;
 `;
 
 export { StyledProjectContainer, StyledProjectImage, StyledProjectName, StyledProjectCategory, StyledProjectNumber, StyledProjectTechnologies };

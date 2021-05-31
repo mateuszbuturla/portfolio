@@ -11,7 +11,8 @@ const StyledPorfolioContainer = styled.section`
 const StyledProjectContainer = styled.div`
   position: absolute;
   top: 0;
-  left: ${(props) => (props.first ? '0' : '100%')};
+  left: ${props => props.left * 100}%;
+  /* left: ${(props) => (props.first ? '0' : '100%')}; */
 `;
 
 export { StyledPorfolioWrapper, StyledPorfolioContainer, StyledProjectContainer };
