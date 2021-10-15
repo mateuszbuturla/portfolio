@@ -12,6 +12,7 @@ function Home() {
   return (
     <>
       <Intro />
+      <div style={{ height: '100vh' }} />
     </>
   );
 }
