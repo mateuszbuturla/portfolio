@@ -1,3 +1,4 @@
 import { IntroBG } from './IntroBG'
+import { Door } from './Door'
 
-export { IntroBG };
+export { IntroBG, Door };
