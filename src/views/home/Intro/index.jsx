@@ -3,6 +3,7 @@ import ScrollMagic from 'scrollmagic';
 import 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap';
 import { IntroBG, Door, Avatar } from '../../../components/Common';
 import { IntroContainer } from '../../../components/Layout';
+import { IntroContent } from './IntroContent';
 
 export const Intro = () => {
   const introRef = useRef(null);
@@ -21,11 +22,14 @@ export const Intro = () => {
   }, []);
 
   return (
-    <IntroContainer ref={introRef}>
-      <IntroBG rootRef={introRef} />
-      <Door direction="left" rootRef={introRef} from="50vw" to="68vw" hide />
-      <Door direction="right" rootRef={introRef} from="50vw" to="68vw" hide />
-      <Avatar rootRef={introRef} />
-    </IntroContainer>
+    <>
+      <IntroContainer ref={introRef}>
+        <IntroBG rootRef={introRef} />
+        <Door direction="left" rootRef={introRef} from="50vw" to="68vw" hide />
+        <Door direction="right" rootRef={introRef} from="50vw" to="68vw" hide />
+        <Avatar rootRef={introRef} />
+      </IntroContainer>
+      <IntroContent />
+    </>
   );
 };
