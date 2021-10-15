@@ -1,2 +1,3 @@
+import { IntroBG } from './IntroBG'
 
-export {  };
+export { IntroBG };

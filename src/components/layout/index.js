@@ -1,2 +1,3 @@
+import { IntroContainer } from './IntroContainer'
 
-export {  };
+export { IntroContainer };
