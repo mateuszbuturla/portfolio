@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import ScrollMagic from 'scrollmagic';
 import 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap';
-import { IntroBG, Door } from '../../../components/Common';
+import { IntroBG, Door, Avatar } from '../../../components/Common';
 import { IntroContainer } from '../../../components/Layout';
 
 export const Intro = () => {
@@ -25,6 +25,7 @@ export const Intro = () => {
       <IntroBG rootRef={introRef} />
       <Door direction="left" rootRef={introRef} from="50vw" to="68vw" hide />
       <Door direction="right" rootRef={introRef} from="50vw" to="68vw" hide />
+      <Avatar rootRef={introRef} />
     </IntroContainer>
   );
 };
