@@ -6,7 +6,9 @@ import {
   StyledProfession,
   StyledParagraph,
   StyledGetInTouch,
+  StyledIcon,
 } from './StyledIntroSectionContent';
+import clickIcon from '../../../../assets/tapIcon.svg';
 
 export const IntroContent = () => {
   return (
@@ -21,7 +23,12 @@ export const IntroContent = () => {
         Lorem Ipsum is simply dummy text of the printing
       </StyledParagraph>
 
-      <StyledGetInTouch>get in touch</StyledGetInTouch>
+      <StyledGetInTouch>
+        <a href="mailto:2002mateuszbuturla@gmail.com">
+          <StyledIcon src={clickIcon} />
+          Get in touch
+        </a>
+      </StyledGetInTouch>
     </StyledIntroSectionContent>
   );
 };

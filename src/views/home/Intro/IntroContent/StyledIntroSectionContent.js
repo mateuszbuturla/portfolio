@@ -19,12 +19,11 @@ const StyledName = styled.h1`
 `;
 
 const StyledSurname = styled.span`
-    color: transparent;
-    -webkit-text-stroke: 1px ${props => props.theme.colors.fontFirst};
+    color: ${props => props.theme.colors.accent};
 `;
 
 const StyledProfession = styled.h2`
-    color: ${props => props.theme.colors.fontFirst};
+    color: ${props => props.theme.colors.fontSecond};
     font-size: 4vh;
 
     @media (orientation: portrait) {
@@ -33,7 +32,7 @@ const StyledProfession = styled.h2`
 `;
 
 const StyledParagraph = styled.p`
-    color: ${props => props.theme.colors.fontFirst};
+    color: ${props => props.theme.colors.fontSecond};
     font-size: 2.4vh;
     margin: 5vh 0px 0px 0px;
     max-width: 20vw;
@@ -53,10 +52,21 @@ const StyledGetInTouch = styled.button`
     bottom: 20vh;
     font-size: 2.4vh;
 
+    a {
+        text-decoration: none;
+        color: ${props => props.theme.colors.fontFirst};
+    }
+
     @media (orientation: portrait) {
         font-size: 4vw;
         max-width: 80vw;
     }
 `;
 
-export { StyledIntroSectionContent, StyledName, StyledSurname, StyledProfession, StyledParagraph, StyledGetInTouch };
+const StyledIcon = styled.img`
+    height: 35px;
+    margin-right: 20px;
+    transform: translateY(25%);
+`;
+
+export { StyledIntroSectionContent, StyledName, StyledSurname, StyledProfession, StyledParagraph, StyledGetInTouch, StyledIcon };

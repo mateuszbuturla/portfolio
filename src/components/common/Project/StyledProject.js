@@ -23,7 +23,7 @@ const StyledProjectImage = styled.img`
 
 const StyledProjectName = styled.h3`
     position: absolute;
-    color: ${props => props.theme.colors.fontSecond};
+    color: ${props => props.theme.colors.fontFirst};
     bottom: 15vh;
     left: 15vw;
     font-size: 10vh;
@@ -38,8 +38,7 @@ const StyledProjectName = styled.h3`
 
 const StyledProjectCategory = styled.p`
     position: absolute;
-    color: transparent;
-    -webkit-text-stroke: 1px ${props => props.theme.colors.fontFirst};
+    color: ${props => props.theme.colors.accent};
     bottom: 25vh;
     left: 15vw;
     font-size: 6vh;

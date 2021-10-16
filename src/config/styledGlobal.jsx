@@ -21,6 +21,8 @@ const theme = {
   colors: {
     bg: '#121212',
     fontFirst: '#FFFFFF',
+    fontSecond: '#7D7D7D',
+    accent: '#fff200',
   },
 };
 
