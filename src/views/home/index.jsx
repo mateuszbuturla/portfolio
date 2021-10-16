@@ -7,6 +7,7 @@ import {} from '../../components/Layout';
 import { Intro } from './Intro';
 import { AboutMe } from './AboutMe';
 import { Outro } from './Outro';
+import { Portfolio } from './Portfolio';
 
 export const Home = () => {
   useEffect(() => {}, []);
@@ -15,6 +16,7 @@ export const Home = () => {
     <>
       <Intro />
       <AboutMe />
+      <Portfolio />
       <Outro />
     </>
   );
